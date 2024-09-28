@@ -43,6 +43,8 @@ foreach ($datas as $data) {
             <h5 class="card-title"> ' . $data['name'] . ' </h5>
             <p class="card-text">' . substr($data['description'], 0, 160) . '...' . '</p>
             <a href="#" class="btn btn-primary">Voir plus</a>
+            <a href="#" class="btn btn-warning">Modifier</a>
+            <a href="#" class="btn btn-danger">Supprimer</a>
             </div>
         </div>';
 }
