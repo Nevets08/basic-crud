@@ -38,11 +38,11 @@ $datas = $conn->query("SELECT * FROM articles")->fetchAll();
 foreach ($datas as $data) {
     echo 
         '<div class="card mb-3">
-            <div class="card-header">Featured</div>
+            <div class="card-header">Crée le ' . $data['created_at'] . '</div>
         <div class="card-body">
             <h5 class="card-title"> ' . $data['name'] . ' </h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <p class="card-text">' . substr($data['description'], 0, 160) . '...' . '</p>
+            <a href="#" class="btn btn-primary">Voir plus</a>
             </div>
         </div>';
 }
